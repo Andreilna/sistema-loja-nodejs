@@ -1,10 +1,8 @@
 import express from "express";
-// Carregando o médoto do Express para gerenciamento de Rotas
+
 const router = express.Router();
 
-// Rota de produtos
 router.get("/produtos", (req, res) => {
-  // Array com lista de produtos
   const produtos = [
     {
       nome: "Celular Motorola E22",
@@ -29,10 +27,8 @@ router.get("/produtos", (req, res) => {
   ];
 
   res.render("produtos", {
-    // Enviando a variável produto para a página
     produtos: produtos,
   });
 });
 
-// Exportando o módulo
 export default router;
