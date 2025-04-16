@@ -1,37 +1,80 @@
-<title>Produtos</title>
+<title>Produtos Inexistentes - Lojas Sem Nada</title>
 
 <%- include('partials/navbar.ejs') %>
 <%- include('partials/header.ejs') %>
 
-<div class="container">
-    <div class="card">
-        <div class="card-header">
-            <h1>Produtos</h1>
+<div class="container mt-5 text-center">
+    <h1 class="display-4">Nossos Produtos Inexistentes</h1>
+    <p class="lead">Onde você encontra aquilo que não precisa, mas que ainda assim deseja comprar!</p>
+    <hr class="my-4">
+
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/img/nada1.png" class="card-img-top" alt="Ar Engarrafado">
+                <div class="card-body">
+                    <h5 class="card-title">Ar Engarrafado Premium</h5>
+                    <p class="card-text">Respire estilo. Não contém oxigênio.</p>
+                    <a href="#" class="btn btn-danger">Comprar Agora</a>
+                </div>
+            </div>
         </div>
-        <div class="card-body">
-            <table class="table table-bordered table-hover">
-                <thead class="table-dark">
-                    <tr>
-                        <th></th>
-                        <th>Nome:</th>
-                        <th>Preço:</th>
-                        <th>Categoria:</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Chamando o Array de objetos -->
-                    <% produtos.forEach(produto => { %>
-                        <tr>
-                            <td style="text-align: center;"><img src="/images/produto.png" alt="Produto"></td>
-                            <td><%= produto.nome %></td>
-                            <td><%= produto.preco.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}) %></td>
-                            <td><%= produto.categoria %></td>
-                        </tr>
-                    <% }) %>
-                </tbody>
-            </table>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/img/nada2.png" class="card-img-top" alt="Nada em Pó">
+                <div class="card-body">
+                    <h5 class="card-title">Nada em Pó</h5>
+                    <p class="card-text">Ideal pra quem já se cansou de tudo.</p>
+                    <a href="#" class="btn btn-danger">Comprar Agora</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/img/nada3.png" class="card-img-top" alt="Botão que Não Faz Nada">
+                <div class="card-body">
+                    <h5 class="card-title">Botão que Não Faz Nada</h5>
+                    <p class="card-text">Clique à vontade. Ele ignora você.</p>
+                    <a href="#" class="btn btn-danger">Comprar Agora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/img/nada4.png" class="card-img-top" alt="Nada de Valor">
+                <div class="card-body">
+                    <h5 class="card-title">Nada de Valor</h5>
+                    <p class="card-text">Pague por algo que não vale nada.</p>
+                    <a href="#" class="btn btn-danger">Comprar Agora</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/img/nada5.png" class="card-img-top" alt="Espaço Vazio">
+                <div class="card-body">
+                    <h5 class="card-title">Espaço Vazio</h5>
+                    <p class="card-text">Apenas um buraco no espaço-tempo.</p>
+                    <a href="#" class="btn btn-danger">Comprar Agora</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/img/nada6.png" class="card-img-top" alt="Silêncio Absoluto">
+                <div class="card-body">
+                    <h5 class="card-title">Silêncio Absoluto</h5>
+                    <p class="card-text">A experiência do nada em sua forma mais pura.</p>
+                    <a href="#" class="btn btn-danger">Comprar Agora</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-    
+
 <%- include('partials/footer.ejs') %>

@@ -1,6 +1,54 @@
-<title>Pedidos</title>
+<title>Pedidos - Lojas Sem Nada</title>
 
 <%- include('partials/navbar.ejs') %>
 <%- include('partials/header.ejs') %>
+
+<div class="container mt-5 text-center">
+    <h1 class="display-4">Seus Pedidos Inexistentes</h1>
+    <p class="lead">Aqui você pode acompanhar o status dos seus pedidos... ou não.</p>
+    <hr class="my-4">
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Produto</th>
+                <th scope="col">Status</th>
+                <th scope="col">Data do Pedido</th>
+                <th scope="col">Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Ar Engarrafado Premium</td>
+                <td><span class="badge badge-warning">Em Processamento</span></td>
+                <td>10/04/2025</td>
+                <td><a href="#" class="btn btn-info">Ver Detalhes</a></td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Nada em Pó</td>
+                <td><span class="badge badge-secondary">Em Espera</span></td>
+                <td>12/04/2025</td>
+                <td><a href="#" class="btn btn-info">Ver Detalhes</a></td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Botão que Não Faz Nada</td>
+                <td><span class="badge badge-danger">Cancelado</span></td>
+                <td>14/04/2025</td>
+                <td><a href="#" class="btn btn-info">Ver Detalhes</a></td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>Silêncio Absoluto</td>
+                <td><span class="badge badge-success">Entregue</span></td>
+                <td>16/04/2025</td>
+                <td><a href="#" class="btn btn-info">Ver Detalhes</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
 <%- include('partials/footer.ejs') %>

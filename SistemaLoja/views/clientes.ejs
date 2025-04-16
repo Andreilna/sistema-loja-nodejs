@@ -1,8 +1,57 @@
-<title>Clientes</title>
+<title>Clientes - Lojas Sem Nada</title>
 
 <%- include('partials/navbar.ejs') %>
 <%- include('partials/header.ejs') %>
 
-    <h1>texte</h1>
+<div class="container mt-5 text-center">
+    <h1 class="display-4">O que dizem nossos "clientes"</h1>
+    <p class="lead">As avaliações são 100% reais, ou não...</p>
+    <hr class="my-4">
+
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/img/depoimento1.jpg" class="card-img-top" alt="Cliente 1">
+                <div class="card-body">
+                    <h5 class="card-title">Érlon Viana</h5>
+                    <p class="card-text">"Comprei o Nada e chegou tudo! Incrível, realmente não tem igual!"</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/img/depoimento2.jpg" class="card-img-top" alt="Cliente 2">
+                <div class="card-body">
+                    <h5 class="card-title">Ricardo Estevam</h5>
+                    <p class="card-text">"Produto invisível e de qualidade duvidosa! Recomendo muito, mas não sei o quê!"</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/img/depoimento3.jpg" class="card-img-top" alt="Cliente 3">
+                <div class="card-body">
+                    <h5 class="card-title">João Vitor</h5>
+                    <p class="card-text">"Eu comprei o 'Silêncio Absoluto' e agora não consigo ouvir nada. Mas é um silêncio maravilhoso!"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="mt-5">
+        <h3>Envie seu depoimento sobre nossos produtos inexistentes!</h3>
+        <form action="/enviar-depoimento" method="POST">
+            <div class="form-group">
+                <label for="nome">Seu nome:</label>
+                <input type="text" class="form-control" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="depoimento">Seu depoimento:</label>
+                <textarea class="form-control" id="depoimento" name="depoimento" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-success mt-3">Enviar Depoimento</button>
+        </form>
+    </section>
+</div>
 
 <%- include('partials/footer.ejs') %>

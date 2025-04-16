@@ -3,11 +3,60 @@
 <%- include('partials/navbar.ejs') %>
 <%- include('partials/header.ejs') %>
 
-    <h1>Bem-vindo a Homepage!</h1>
-    <hr>
-    <p>Lojas Sem Nada!</p>
+<div class="container mt-5 text-center">
 
-    <!-- Importando a imagem da pasta public -->
-     <img src="/images/renan.jpg" alt="renan">
+    <h1 class="display-4">Bem-vindo às Lojas Sem Nada!</h1>
+    <p class="lead">Aqui você encontra tudo o que não precisa!</p>
+    <hr class="my-4">
+  
+    <a class="btn btn-warning btn-lg mb-4" href="/produtos" role="button">Ver Produtos Inexistentes</a>
 
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="/img/nada1.png" class="card-img-top" alt="Ar Engarrafado">
+          <div class="card-body">
+            <h5 class="card-title">Ar Engarrafado Premium</h5>
+            <p class="card-text">Respire estilo. Não contém oxigênio.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="/img/nada2.png" class="card-img-top" alt="Nada em Pó">
+          <div class="card-body">
+            <h5 class="card-title">Nada em Pó</h5>
+            <p class="card-text">Ideal pra quem já se cansou de tudo.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="/img/nada3.png" class="card-img-top" alt="Botão que Não Faz Nada">
+          <div class="card-body">
+            <h5 class="card-title">Botão que Não Faz Nada</h5>
+            <p class="card-text">Clique à vontade. Ele ignora você.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <section class="mt-5">
+      <h3>O que dizem nossos "clientes"</h3>
+      <blockquote class="blockquote">
+        <p>"Comprei o Nada e chegou tudo!"</p>
+        <footer class="blockquote-footer">Érlon Viana</footer>
+      </blockquote>
+      <blockquote class="blockquote">
+        <p>"Produto invisível e de qualidade duvidosa! Recomendo!"</p>
+        <footer class="blockquote-footer">Ricardo Estevam</footer>
+      </blockquote>
+    </section>
+
+    <section class="mt-5 mb-5">
+      <h4>Nosso propósito</h4>
+      <p>Num mundo saturado de consumo, oferecemos aquilo que ninguém mais vende: Nada!!</p>
+    </section>
+  </div>
+  
 <%- include('partials/footer.ejs') %>
