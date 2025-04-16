@@ -19,34 +19,25 @@
             </tr>
         </thead>
         <tbody>
+            <% pedidos.forEach(pedido => { %>
             <tr>
-                <th scope="row">1</th>
-                <td>Ar Engarrafado Premium</td>
-                <td><span class="badge badge-warning">Em Processamento</span></td>
-                <td>10/04/2025</td>
+                <th scope="row"><%= pedido.id %></th>
+                <td><%= pedido.produto %></td>
+                <td>
+                    <% if(pedido.status === 'Em Processamento') { %>
+                    <span class="badge badge-warning"><%= pedido.status %></span>
+                    <% } else if(pedido.status === 'Em Espera') { %>
+                    <span class="badge badge-secondary"><%= pedido.status %></span>
+                    <% } else if(pedido.status === 'Cancelado') { %>
+                    <span class="badge badge-danger"><%= pedido.status %></span>
+                    <% } else if(pedido.status === 'Entregue') { %>
+                    <span class="badge badge-success"><%= pedido.status %></span>
+                    <% } %>
+                </td>
+                <td><%= pedido.data %></td>
                 <td><a href="#" class="btn btn-info">Ver Detalhes</a></td>
             </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Nada em Pó</td>
-                <td><span class="badge badge-secondary">Em Espera</span></td>
-                <td>12/04/2025</td>
-                <td><a href="#" class="btn btn-info">Ver Detalhes</a></td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Botão que Não Faz Nada</td>
-                <td><span class="badge badge-danger">Cancelado</span></td>
-                <td>14/04/2025</td>
-                <td><a href="#" class="btn btn-info">Ver Detalhes</a></td>
-            </tr>
-            <tr>
-                <th scope="row">4</th>
-                <td>Silêncio Absoluto</td>
-                <td><span class="badge badge-success">Entregue</span></td>
-                <td>16/04/2025</td>
-                <td><a href="#" class="btn btn-info">Ver Detalhes</a></td>
-            </tr>
+            <% }) %>
         </tbody>
     </table>
 </div>

@@ -9,33 +9,17 @@
     <hr class="my-4">
 
     <div class="row mt-4">
+        <% clientes.forEach(cliente => { %>
         <div class="col-md-4">
             <div class="card">
-                <img src="/img/depoimento1.jpg" class="card-img-top" alt="Cliente 1">
+                <img src="<%= cliente.imagem %>" class="card-img-top" alt="<%= cliente.nome %>">
                 <div class="card-body">
-                    <h5 class="card-title">Érlon Viana</h5>
-                    <p class="card-text">"Comprei o Nada e chegou tudo! Incrível, realmente não tem igual!"</p>
+                    <h5 class="card-title"><%= cliente.nome %></h5>
+                    <p class="card-text">"<%= cliente.depoimento %>"</p>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card">
-                <img src="/img/depoimento2.jpg" class="card-img-top" alt="Cliente 2">
-                <div class="card-body">
-                    <h5 class="card-title">Ricardo Estevam</h5>
-                    <p class="card-text">"Produto invisível e de qualidade duvidosa! Recomendo muito, mas não sei o quê!"</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <img src="/img/depoimento3.jpg" class="card-img-top" alt="Cliente 3">
-                <div class="card-body">
-                    <h5 class="card-title">João Vitor</h5>
-                    <p class="card-text">"Eu comprei o 'Silêncio Absoluto' e agora não consigo ouvir nada. Mas é um silêncio maravilhoso!"</p>
-                </div>
-            </div>
-        </div>
+        <% }) %>
     </div>
 
     <section class="mt-5">
